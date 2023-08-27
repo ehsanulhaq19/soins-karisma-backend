@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Autography">
+    <style>
+        .email-container {
+            font-family: sans-serif;
+            background-color: #a79c97ff !important;
+            width: 800px;
+        }
+        .email-header-container {
+            
+        }
+        .email-header-container .header-logo {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .email-header-container .header-logo img {
+            width: 266px;
+            height: 75px;
+        }
+
+        .email-body-container {
+            width: 800px;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .email-body-container .email-card {
+            background: white;
+            width: 83.4%;
+            margin: auto;
+        }
+
+        .email-body-container .email-card .email-card-body .greeting-message-container {
+            padding: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .email-body-container .email-card .email-card-body .greeting-message-container .greeting{
+            font-family: autography;
+            font-size: 40px;
+        }
+
+        .email-body-container .email-card .email-card-body .greeting-message-container .greeting-message {
+            font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            font-family: poppins;
+            font-weight: 800;
+            word-spacing: 2px;
+            width: 500px;
+            margin: auto;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .email-body-container .email-card .email-card-body .order-message {
+            text-align: center;
+            letter-spacing: 1.5px;
+            line-height: 1.25;
+            width: 420px;
+            margin: auto;
+        }
+
+        .email-body-container .email-card .email-card-body .order-message p {
+            margin-top: 0;
+        }
+        
+        .email-body-container .email-card .email-card-body  .order-summary-detail {
+            height: fit-content;
+            margin: auto;
+            margin-bottom: 18px
+        }
+
+        .email-body-container .email-card .email-card-body  .order-summary-detail .heading{
+            color: #aa8a82ff;
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .email-body-container .email-card .email-card-body  .order-summary-detail .detail-section {
+            line-height: 1.25;
+        }
+
+        .email-body-container .email-card .email-card-body  .order-summary-detail .detail-section.align-items-start {
+            max-width: 225px;
+            margin: auto;
+        }
+
+        .email-body-container .email-card .email-card-body  .order-summary-detail .detail-section.align-items-start .detail-block {
+            text-align: start;
+        }
+
+        .email-body-container .email-card .email-card-body  .order-summary-detail .detail-section .detail-block .label {
+            font-weight: 800;
+        }
+
+        .email-body-container .email-body-container .email-card .email-card-body .order-summary-table {
+            font-size: 20px;
+            padding: 0 55px;
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table table {
+            margin: auto;
+            width: 87%;
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table  .order-summary-description {
+
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table  .order-summary-description .summary-container {
+            text-align: start;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            width: 230px;
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table  .order-summary-description .summary-container p {
+            margin: 0;
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table  .order-summary-description .summary-container .heading {
+            color: #b08881ff;
+            font-weight: 800;
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table  .order-summary-description .summary-container .description {
+
+        }
+
+        .email-body-container .email-card .email-card-body .order-summary-table .order-summary-image img {
+            width: 240px;
+        }
+
+
+        .email-body-container .email-card .email-card-body .app-message {
+            color: #aa8a82ff;
+            line-height: 1.25;
+            width: 400px;
+            margin: 20px auto;
+            letter-spacing: 1.5px;
+        }
+
+        .email-body-container .email-card .email-card-body .user-questions {
+            text-align: center;
+            letter-spacing: 1px;
+            font-family: poppins;
+            width: 500px;
+            margin: auto;
+        }
+
+        .email-body-container .email-card .email-card-body .user-questions .heading {
+            font-weight: 800;
+        }
+
+        .email-body-container .email-card .email-card-body .signature-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .email-body-container .email-card .email-card-body .signatee-info {
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        .email-body-container .footer {
+            font-size: 14px;
+            color: rgb(89, 87, 87);
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .email-body-container .footer .small-text{
+            margin: 0;
+            line-height: 0.5;
+        }
+
+        .email-body-container .footer .social-links a{
+            cursor: pointer;
+        }
+
+        .email-body-container .footer .social-links a img{
+            margin-right: 12px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .email-body-container .footer .social-links a:last-child img{
+            margin-right: 0;
+        }
+
+        /**
+            Extras
+        */
+        .mt-30px {
+            margin-top: 30px;
+        }
+        .width-55px {
+            width: 55px;
+        }
+        .mt-0 {
+            margin-top: 0;
+        }
+        .mb-5px {
+            margin-bottom: 5px;
+        }
+        .mb-15px {
+            margin-bottom: 15px;
+        }
+        .mt-10px {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header-container">
+            <div class="header-logo">
+                <img class="" src="{{domain}}/images/templates/email/order/logo.png"/>
+            </div>
+        </div>
+        <div class="email-body-container">
+            <div class="email-card">
+                <div class="email-card-header">
+                    <img src="{{domain}}/images/templates/email/order/header-image.png" />
+                </div>
+                <div class="email-card-body">
+                    <div class="greeting-message-container">
+                        <p class="greeting-message">
+                            {{good_news_message}}!
+                        </p>
+                        <div class="greeting">
+                            {{hello}} ({{firstName}})
+                        </div>
+                    </div>
+                    <div class="order-message">
+                        <p>
+                            {{thank_you_order_message}}. 
+                        </p>
+                    </div>
+                    <div class="order-summary-detail">
+                        <p class="heading">{{order_summary}}</p>
+                        <div class="detail-section align-items-start">
+                            <div class="detail-block">
+                                <span class="label">{{client_no}}:</span>
+                                <span>{{clientId}}</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{transaction_date}}:</span>
+                                <span>{{transactionDate}}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="order-summary-detail">
+                        <div class="detail-section">
+                            <p class="heading">{{purchase_summary}}</p>
+                            <div class="detail-block mb-15px">
+                                <span class="label">Xxxxxxxx</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{subtotal}}:</span>
+                                <span>{{subTotalAmount}}</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{tvq}}:</span>
+                                <span>{{taxQst}}</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{pst}}:</span>
+                                <span>{{taxPst}}</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{hst}}:</span>
+                                <span>{{taxHst}}</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{gst}}:</span>
+                                <span>{{taxGst}}</span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="label">{{total}}:</span>
+                                <span>{{totalAmount}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-summary-table">
+                        <table>
+                            <tr>
+                                <td class="order-summary-image">
+                                    <img class="" src="{{domain}}/images/templates/email/order/background.png" />
+                                </td>
+                                <td class="order-summary-description">
+                                    <div class="summary-container">
+                                        <p class="heading">
+                                            {{have_you_heard_about_our_message}}
+                                        </p>
+                                        <p class="description">
+                                            {{with_membership_message}}
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="app-message">
+                        {{treat_your_self}}
+                    </div>
+                    <div class="user-questions">
+                        <p class="heading mb-5px">{{do_you_have_a_question}} </p>
+                        <p class="mt-0">
+                            {{contact_us_directly}}
+                        </p>
+                        <p class="mt-10px">
+                            {{thank_you_for_choosing}}
+                        </p>
+                    </div>
+
+                    <div class="signature-container">
+                        <img src="{{domain}}/images/templates/email/order/signature.png" />
+        
+                        <div class="signatee-info">
+                            Yannick Savage <br/>
+                            President, Soins Karismä 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="small-text">
+                    <p>{{if_you_have_any_questions_please_contact_us}} <a class="link">{{here}}</a>.</p>
+                </div>
+                <div class="social-links">
+                    <a style="cursor: pointer;" href="{{facebookUrl}}">
+                        <img src="{{domain}}/images/icons/png/facebook-icon.png" class="facebook-icon"/>
+                    </a>
+                    <a style="cursor: pointer;" href="{{instagramUrl}}">
+                        <img src="{{domain}}/images/icons/png/instagram-icon.png" class="instagram-icon"/>
+                    </a>
+                    <a style="cursor: pointer;">
+                        <img src="{{domain}}/images/icons/png/tiktok-icon.png" />
+                    </a>
+                </div>
+                <div class="small-text">
+                    <p>{{all_rights_reserved}}</p>
+                    <p>{{soins_address}}</p>
+                    <p>www.soinskarisma.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

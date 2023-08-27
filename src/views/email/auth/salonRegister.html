@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Autography">
+    <style>
+        .email-container {
+            margin: auto;
+            max-width: 800px;
+            font-family: poppins;
+            text-align: center;
+            min-width: 800px;
+            border: 1px solid black;
+            height: auto;
+            width: 800px;
+        }
+        .email-container .header{
+            background: url("{{domain}}/images/templates/email/background2.png");
+            height: 764px;
+            width: 800px;
+        }
+        .email-container .header .logo{
+            width: 265px;
+            height: 63px;
+            margin-top: 77px;
+        }
+
+        .email-container .header .background{
+        }
+
+        .email-container .body{
+            height: 350px;
+        }
+
+        .card {
+            background-color: rgb(236, 231, 228);
+            width: 660px;
+            margin: auto;
+            margin-top: 345px;
+            padding: 1px;
+            color: rgb(60, 60, 59);
+        }
+
+        .card .card-header h3{
+            color: rgb(144, 94, 94);
+            font-size: 42px;
+            margin-top: 18px;
+            margin-bottom: 12px;
+        }
+        .card .card-header hr {
+            border-bottom: 1px solid rgb(144, 94, 94);
+            margin: 0 55px;
+        }
+        .card .card-body{
+            padding-bottom: 20px;
+        }
+        .card .card-body .greeting {
+            font-family: autography;
+            font-size: 50px;
+        }
+
+        .card .card-body .message-section {
+            font-size: 20px;
+        }
+
+        .card .card-body .message-section p{
+            margin: 0;
+        }
+
+        .auth-form {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .auth-form .form-field {
+            min-width: 220px;
+            height: 30px;
+            margin: auto;
+            background: rgb(213, 197, 195);
+            border-radius: 7px;
+            margin-bottom: 10px;
+            padding: 5px 40px 0 10px;
+            text-align: start;
+            width: fit-content;
+        }
+
+        .auth-form .form-field .label i{
+            margin-right: 4px;
+        }
+
+        .mr-6px{
+            margin-right: 6px !important;
+        }
+
+        .auth-form .form-field .label{
+            color: rgb(144, 94, 94);
+            font-weight: 800;
+            margin-right: 5px;
+        }
+        .auth-form .form-field .value{
+            color: rgb(144, 94, 94);
+        }
+        .submit-container {
+            margin-top: 20px;
+        }
+
+        .submit-button {
+            background-color: rgb(144, 94, 94);
+            border: none;
+            padding: 10px 40px;
+            margin-top: 15px;
+            color: white !important;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: initial;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: rgb(89, 87, 87);
+        }
+
+        .footer .small-text{
+            margin: 0;
+            line-height: 0.5;
+        }
+
+        .footer .social-links a{
+            cursor: pointer;
+        }
+
+        .footer .social-links a img{
+            margin-right: 12px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .footer .social-links a:last-child img{
+            margin-right: 0;
+        }
+
+        .link {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img class="logo" src="{{domain}}/images/logos/logo.png"/>
+            <div class="card">
+                <div class="card-header">
+                    <h3>
+                        WELCOME TO SOINS KARISMÄ
+                        <hr/>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="greeting">
+                        Hello ({{firstName}})
+                    </div>
+                    <div class="message-section">
+                        <p>Thank you for being part of the change. We’re happy </p>
+                        <p>to have you on board. It is our privilege to have you as </p>
+                        <p>part of the team. To Log in to the Salons Dashboard, </p>
+                        <p>use these credentials. </p>
+                    </div>
+                    <div class="auth-form">
+                        <div class="form-field">
+                            <span class="label">
+                                <i class="fa-solid fa-envelope"></i>
+                                Username:
+                            </span>
+                            <span class="value">({{userName}})</span>
+                        </div>
+                        <div class="form-field">
+                            <span class="label">
+                                <i class="fa-solid fa-lock mr-6px"></i>
+                                Password:
+                            </span>
+                            <span class="value">({{password}})</span>
+                        </div>
+                    </div>
+                    <div class="message-section">
+                        <p>Remember, to activate your account, you </p>
+                        <p>must change the password for security.</p>
+                    </div>
+                    <div class="submit-container">
+                        <a class="submit-button" href="{{loginLink}}">
+                            LOG IN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body"></div>
+        <div class="footer">
+            <div class="small-text">
+                <p>If you have any questions, please contact us <a class="link">here</a>.</p>
+            </div>
+            <div class="social-links">
+                <a style="cursor: pointer;">
+                    <img src="{{domain}}/images/icons/png/facebook-icon.png" class="facebook-icon"/>
+                </a>
+                <a style="cursor: pointer;">
+                    <img src="{{domain}}/images/icons/png/instagram-icon.png" class="instagram-icon"/>
+                </a>
+                <a style="cursor: pointer;">
+                    <img src="{{domain}}/images/icons/png/tiktok-icon.png" />
+                </a>
+            </div>
+            <div class="small-text">
+                <p>© 2022 Soins Karismä Inc. All rights reserved</p>
+                <p>249 Rue St-Jacques Ouest, #201 Montréal, Québec H2Y 1M6</p>
+                <p>www.soinskarisma.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

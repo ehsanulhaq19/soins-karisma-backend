@@ -1,0 +1,13 @@
+{
+    "itemsPerPage": 30,
+    "roles": {
+        "GET": "GET",
+        "GET.SELF": "GET.SELF",
+        "POST": "POST",
+        "POST.SELF": "POST.SELF",
+        "PATCH": "PATCH",
+        "PATCH.SELF": "PATCH.SELF",
+        "DELETE": "DELETE",
+        "DELETE.SELF": "DELETE.SELF"
+    }
+}

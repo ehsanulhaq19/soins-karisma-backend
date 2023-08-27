@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Autography">
+    <style>
+        .email-container {
+            font-family: sans-serif;
+        }
+        .email-header-container {
+            background-color: #aa8a82ff !important;
+            height: 834px;
+            width: 800px;
+            background: url("{{domain}}/images/templates/email/subscription/header-background.png");
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        .email-header-container .header-logo {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .email-header-container .header-logo img {
+            width: 266px;
+            height: 63px;
+        }
+
+        .email-header-container .header-summary{
+            font-family: sans-serif;
+            font-size: 35px;
+            color: white;
+            font-weight: 800;
+            text-align: center;
+            margin: auto;
+            margin-top: 30px;
+            line-height: 1.25;
+        }
+
+        .email-header-container .separator {
+            border-bottom: 1px solid white;
+            width: 71%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .email-header-container  .header-line {
+            font-size: 28px;
+            color: white;
+            font-weight: 800;
+            margin: auto;
+            width: max-content;
+            margin-top: 8px;
+        }
+
+        .email-header-container .background-absolute-images .right-image {
+
+        }
+
+        .email-header-container .background-absolute-images .left-image {
+
+        }
+
+        .email-body-container {
+            width: 800px;
+            background-color: #ebe7e4ff;
+            padding-bottom: 10px;
+        }
+
+        .email-body-container .greeting-message-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .email-body-container .greeting-message-container .greeting{
+            font-family: autography;
+            font-size: 38px;
+        }
+
+        .email-body-container .greeting-message-container .greeting-message {
+            font-size: 17px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            font-family: poppins;
+        }
+        
+        .email-body-container .order-summary-table {
+            font-size: 20px;
+            padding: 0 55px;
+        }
+
+        .email-body-container .order-summary-table table {
+            width: 100%;
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description {
+
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description  .order-summary-detail {
+            height: fit-content;
+            margin: auto;
+            margin-bottom: 18px
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description  .order-summary-detail .heading{
+            color: #aa8a82ff;
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description  .order-summary-detail .detail-section {
+            line-height: 1.25;
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description  .order-summary-detail .detail-section .detail-block {
+
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description  .order-summary-detail .detail-section .detail-block .label {
+            font-weight: 800;
+        }
+
+        .email-body-container .order-summary-table  .order-summary-description  .order-summary-detail .submit-button {
+            background-color: #aa8a82ff;
+            color: white;
+            font-weight: 800;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .email-body-container .order-summary-table {
+
+        }
+
+        .email-body-container .order-summary-table .order-summary-image img {
+            float: right;
+            width: 270px;
+            height: 420px;
+        }
+
+
+        .email-body-container .next-steps-container {
+            margin: auto;
+            width: fit-content;
+        }
+
+        .email-body-container .next-steps-container .next-steps-container-heading{
+            color: #aa8a82ff;
+            font-size: 23px;
+            font-weight: 800;
+            width: fit-content;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container {
+
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container table {
+            
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container table .step-info-cell{
+            background-color: #d0c4c2ff;
+            height: 240px;
+            width: 206px;
+            margin: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container table .step-info-cell .cell-image {
+
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container table .step-info-cell .cell-image img {
+            padding-top: 30px;
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container table .step-info-cell .content {
+            padding: 0px 20px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .email-body-container .next-steps-container .steps-flow-container .inner-table {
+            margin: auto;
+        }
+
+        .email-body-container .user-questions {
+            text-align: center;
+            letter-spacing: 1px;
+            font-family: poppins;
+        }
+
+        .email-body-container .user-questions .heading {
+            font-weight: 800;
+        }
+
+        .email-body-container .signature-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .email-body-container .signatee-info {
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        .email-body-container .footer {
+            font-size: 14px;
+            color: rgb(89, 87, 87);
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .email-body-container .footer .small-text{
+            margin: 0;
+            line-height: 0.5;
+        }
+
+        .email-body-container .footer .social-links a{
+            cursor: pointer;
+        }
+
+        .email-body-container .footer .social-links a img{
+            margin-right: 12px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .email-body-container .footer .social-links a:last-child img{
+            margin-right: 0;
+        }
+
+        /**
+            Extras
+        */
+        .mt-30px {
+            margin-top: 30px;
+        }
+        .width-55px {
+            width: 55px;
+        }
+        .mt-0 {
+            margin-top: 0;
+        }
+        .mb-5px {
+            margin-bottom: 5px;
+        }
+        .mt-10px {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header-container">
+            <div class="header-logo">
+                <img class="" src="{{domain}}/images/templates/email/subscription/logo.png"/>
+            </div>
+            <p class="header-summary">
+                <span>{{good_news}},</span><br/>
+                <span>{{your_soins_karisma_account}}</span><br/>
+                <span>{{has_been_created}}!</span>
+            </p>
+            <div class="separator"></div>
+            <p class="header-line" >{{ready_to_be_pampered_by_our_experts}}?</p>
+            <div class="background-absolute-images">
+                <!-- <img class="left-image" src="{{domain}}/images/templates/email/subscription/white-stars.png"/>
+                <img class="right-image" src="{{domain}}/images/templates/email/subscription/white-double-stars.png"/> -->
+            </div>
+        </div>
+        <div class="email-body-container">
+            <div class="greeting-message-container">
+                <div class="greeting">
+                    {{hello}} ({{firstName}})
+                </div>
+                <p class="greeting-message">
+                    <span>{{thank_you_for_purchasing_our_subscription_you_make_our_day}}! </span><br/>
+                    <span>{{your_support_and_confidence_in_us_is_greatly_appreciated}}.</span>
+                </p>
+            </div>
+            <div class="order-summary-table">
+                <table>
+                    <tr>
+                        <td class="order-summary-description">
+                            <div class="order-summary-detail">
+                                <p class="heading">{{order_summary}}</p>
+                                <div class="detail-section">
+                                    <div class="detail-block">
+                                        <span class="label">{{client_no}}:</span>
+                                        <span>{{clientId}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{transaction_date}}:</span>
+                                        <span>{{transactionDate}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{subtotal}}:</span>
+                                        <span>{{subTotalAmount}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{tvq}}:</span>
+                                        <span>{{taxQst}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{pst}}:</span>
+                                        <span>{{taxPst}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{hst}}:</span>
+                                        <span>{{taxHst}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{gst}}:</span>
+                                        <span>{{taxGst}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{total}}:</span>
+                                        <span>{{totalAmount}}</span>
+                                    </div>
+
+                                    <div class="detail-block mt-30px">
+                                        <span class="label">{{your_subscription}}:</span>
+                                        <span>{{subscriptionType}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{start_date}}:</span>
+                                        <span>{{startDate}}</span>
+                                    </div>
+                                    <div class="detail-block">
+                                        <span class="label">{{expires_on}}:</span>
+                                        <span>{{endDate}}</span>
+                                    </div>
+                                </div>
+                                <button class="submit-button">{{get_started}}</button>
+                            </div>
+                        </td>
+                        <td class="order-summary-image">
+                            <img class="" src="{{domain}}/images/templates/email/subscription/hand-image.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="next-steps-container">
+                <p class="next-steps-container-heading">{{the_next_steps}}</p>
+                <div class="steps-flow-container">
+                    <table>
+                        <tr>
+                            <td>
+                               <div class="step-info-cell">
+                                    <div class="cell-image">
+                                        <img src="{{domain}}/images/templates/email/subscription/password-step.png" />
+                                    </div>
+                                    <p class="content">{{click_here_to_reset_your_password}}</p>
+                               </div> 
+                            </td>
+
+                            <td>
+                               <div class="step-info-cell">
+                                    <div class="cell-image">
+                                        <img src="{{domain}}/images/templates/email/subscription/login-step.png" />
+                                    </div>
+                                    <p class="content">{{click_here_to_login_to_our_platform}}</p>
+                               </div> 
+                            </td>
+
+                            <td>
+                               <div class="step-info-cell">
+                                    <div class="cell-image">
+                                        <img src="{{domain}}/images/templates/email/subscription/phone-step.png" />
+                                    </div>
+                                    <p class="content">{{explore_the_platform_to_familiarize_yourself_with_the_interface}}</p>
+                               </div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                               <table class="inner-table">
+                                   <tr>
+                                       <td>
+                                            <div class="step-info-cell">
+                                                <div class="cell-image">
+                                                    <img src="{{domain}}/images/templates/email/subscription/booking-step.png" />
+                                                </div>
+                                                <p class="content">{{book_your_first_appointment}}</p>
+                                            </div>
+                                       </td>
+                                       <td>
+                                            <div class="step-info-cell">
+                                                <div class="cell-image">
+                                                    <img src="{{domain}}/images/templates/email/subscription/sk-step.png" class="width-55px" />
+                                                </div>
+                                                <p class="content">{{get_comfortable_and_let_yourself_be_pampered_by_our_experts}}</p>
+                                            </div>
+                                        </td>
+                                   </tr>
+                               </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="user-questions">
+                <p class="heading mb-5px">{{do_you_have_a_question}}?</p>
+                <p class="mt-0">
+                    {{contact_us_directly_on_our_website_or_by_email_at}} support@soinskarisma.com <br/>
+                    {{or_on_social_media_instagram_soins_karisma_and_facebook}} (Soins Karismä)
+                </p>
+                <p class="mt-10px">
+                    {{thanks_again_for_choosing_us_i_will_make_sure_that_our_team}} <br/>
+                    {{offers_you_a_service_beyond_your_expectations}}.
+                </p>
+            </div>
+            <div class="signature-container">
+                <img src="{{domain}}/images/templates/email/subscription/signature.png" />
+
+                <div class="signatee-info">
+                    Yannick Savage <br/>
+                    {{president}}, Soins Karismä 
+                </div>
+            </div>
+            <div class="footer">
+                <div class="small-text">
+                    <p>{{if_you_have_any_questions_please_contact_us}} <a class="link">{{here}}</a>.</p>
+                </div>
+                <div class="social-links">
+                    <a style="cursor: pointer;" href="{{facebookUrl}}">
+                        <img src="{{domain}}/images/icons/png/facebook-icon.png" class="facebook-icon"/>
+                    </a>
+                    <a style="cursor: pointer;" href="{{instagramUrl}}">
+                        <img src="{{domain}}/images/icons/png/instagram-icon.png" class="instagram-icon"/>
+                    </a>
+                    <a style="cursor: pointer;">
+                        <img src="{{domain}}/images/icons/png/tiktok-icon.png" />
+                    </a>
+                </div>
+                <div class="small-text">
+                    <p>{{©_2022_soins_karismä_inc_all_rights_reserved}}</p>
+                    <p>{{249_rue_st_jacques_quest_201_montréal_québec_h2y_1m6}}</p>
+                    <p>www.soinskarisma.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

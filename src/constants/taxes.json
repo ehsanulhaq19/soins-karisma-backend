@@ -1,0 +1,106 @@
+{
+    "Alberta": {
+        "tax": {
+            "GST": 5,
+            "PST": 0,
+            "HST": 0,
+            "QST": 0
+        }
+    },
+    "British Columbia": {
+        "tax": {
+            "GST": 5,
+            "PST": 7,
+            "HST": 0,
+            "QST": 0
+        }
+    },
+    "Manitoba": {
+        "tax": {
+            "GST": 5,
+            "PST": 7,
+            "HST": 0,
+            "QST": 0
+        }
+    },
+    "New Brunswick": {
+        "tax": {
+            "GST": 0,
+            "PST": 0,
+            "HST": 15,
+            "QST": 0
+        }
+    },
+    "Newfoundland and Labrador": {
+        "tax": {
+            "GST": 0,
+            "PST": 0,
+            "HST": 15,
+            "QST": 0
+        }
+    },
+    "Northwest Territories": {
+        "tax": {
+            "GST": 5,
+            "PST": 0,
+            "HST": 0,
+            "QST": 0
+        }
+    },
+    "Nova Scotia": {
+        "tax": {
+            "GST": 0,
+            "PST": 0,
+            "HST": 15,
+            "QST": 0
+        }
+    },
+    "Nunavut": {
+        "tax": {
+            "GST": 5,
+            "PST": 0,
+            "HST": 0,
+            "QST": 0
+        }
+    },
+    "Ontario": {
+        "tax": {
+            "GST": 0,
+            "PST": 0,
+            "HST": 13,
+            "QST": 0
+        }
+    },
+    "Quebec": {
+        "tax": {
+            "GST": 5,
+            "PST": 0,
+            "HST": 0,
+            "QST": 9.98
+        }
+    },
+    "Prince Edward Island": {
+        "tax": {
+            "GST": 0,
+            "PST": 0,
+            "HST": 15,
+            "QST": 0
+        }
+    },
+    "Saskatchewan": {
+        "tax": {
+            "GST": 5,
+            "PST": 6,
+            "HST": 0,
+            "QST": 0
+        }
+    },
+    "Yukon": {
+        "tax": {
+            "GST": 5,
+            "PST": 0,
+            "HST": 0,
+            "QST": 0
+        }
+    }
+}

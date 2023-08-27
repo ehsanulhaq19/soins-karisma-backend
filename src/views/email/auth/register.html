@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Autography">
+    <style>
+        .email-container {
+            margin: auto;
+            max-width: 800px;
+            font-family: poppins;
+            text-align: center;
+            min-width: 800px;
+            height: 920px;
+            border: 1px solid black;
+        }
+        .email-container .header{
+            background-image: url("{{domain}}/images/templates/email/background1.png");
+            height: 533px;
+            width: 800px;
+        }
+        .email-container .header .logo{
+            width: 265px;
+            height: 63px;
+            margin-top: 50px;
+        }
+
+        .email-container .header .background{
+            height: calc(inherit);
+        }
+
+        .email-container .body{
+            height: 210px;
+        }
+
+        .card {
+            background-color: rgb(236, 231, 228);
+            width: 660px;
+            margin: auto;
+            margin-top: 250px;
+        }
+
+        .card .card-header h3{
+            color: rgb(175, 136, 128);
+            font-size: 34px;
+            margin-top: 18px;
+            margin-bottom: 12px;
+            padding-top: 15px;
+        }
+        .card .card-header hr {
+            border-bottom: 1px solid rgb(175, 136, 128);
+            margin: 0 55px;
+        }
+
+        .card .card-body{
+            color: rgb(60, 60, 59);
+        }
+
+        .card .card-body .greeting {
+            font-family: autography;
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        
+        .card .card-body .message-section-container {
+            font-size: 18px;
+        }
+
+        .card .card-body .message-section-container p {
+            margin: 0;
+        }
+
+        .submit-container {
+            margin-top: 45px;
+            padding-bottom: 30px;
+        }
+
+        .submit-button {
+            background-color: rgb(144, 94, 94);
+            border: none;
+            padding: 10px 40px;
+            margin-top: 15px;
+            color: white !important;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: initial;
+        }
+
+        .footer {
+            font-size: 14px;
+            margin-top: 10px;
+            color: rgb(89, 87, 87);
+        }
+
+        .footer .small-text-container p{
+            margin: 0;
+        }
+
+        .footer .social-links{
+            height: 40px;
+            margin: 5px 0;
+        }
+
+        .footer .social-links a{
+            cursor: pointer;
+        }
+        
+        .footer .social-links a img{
+            margin-right: 12px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .footer .social-links a:last-child img{
+            margin-right: 0;
+        }
+
+        .link {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .capitalize {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img class="logo" src="{{domain}}/images/logos/logo.png"/>
+            <div class="card">
+                <div class="card-header">
+                    <h3>
+                        WELCOME TO SOINS KARISMÄ
+                        <hr/>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="greeting">
+                        Hello (<span class="capitalize">{{name}}</span>)
+                    </div>
+                    <div class="message-section-container">
+                        <p>Thank you for signing up. We’re happy to have you on board. </p>
+                        <p>It is our privilege to have you as our customer. We are pretty </p>
+                        <p>much sure that you will love the Soins Karismä Experience. </p>
+                    </div>
+                    <div class="submit-container">
+                        <a class="submit-button" href="{{loginLink}}">
+                            GET STARTED
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            
+        </div>
+        <div class="footer">
+            <div class="small-text-container">
+                <p>If you have any questions, please contact us <a class="link">here</a>.</p>
+            </div>
+            <div class="social-links">
+                <a style="cursor: pointer;">
+                    <img src="{{domain}}/images/icons/png/facebook-icon.png" class="facebook-icon"/>
+                </a>
+                <a style="cursor: pointer;">
+                    <img src="{{domain}}/images/icons/png/instagram-icon.png" class="instagram-icon"/>
+                </a>
+                <a style="cursor: pointer;">
+                    <img src="{{domain}}/images/icons/png/tiktok-icon.png" />
+                </a>
+            </div>
+            <div class="small-text-container">
+                <p>© 2022 Soins Karismä Inc. All rights reserved</p>
+                <p>249 Rue St-Jacques Ouest, #201 Montréal, Québec H2Y 1M6</p>
+                <p>www.soinskarisma.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

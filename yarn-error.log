@@ -1,0 +1,44 @@
+Arguments: 
+  /home/coeus/.nvm/versions/node/v16.17.1/bin/node /usr/local/bin/yarn add express sequelize mysql2 body-parser cors – save
+
+PATH: 
+  /home/coeus/.local/bin:/home/coeus/bin:/home/coeus/.nvm/versions/node/v16.17.1/bin:/home/coeus/.local/bin:/home/coeus/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/coeus/bin:/home/coeus/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.17.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  TypeError [ERR_UNESCAPED_CHARACTERS]: https://registry.yarnpkg.com/–: Request path contains unescaped characters
+      at new NodeError (node:internal/errors:387:5)
+      at new ClientRequest (node:_http_client:173:13)
+      at Object.request (node:https:357:10)
+      at Request.module.exports.Request.start (/usr/local/lib/node_modules/yarn/lib/cli.js:141445:32)
+      at Request.module.exports.Request.end (/usr/local/lib/node_modules/yarn/lib/cli.js:142204:10)
+      at end (/usr/local/lib/node_modules/yarn/lib/cli.js:141258:14)
+      at Immediate.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141272:7)
+      at processImmediate (node:internal/timers:466:21)
+
+npm manifest: 
+  {
+    "name": "soins-karisma",
+    "version": "1.0.0",
+    "description": "Soins karima app build in node",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
